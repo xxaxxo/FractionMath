@@ -1,0 +1,24 @@
+{
+  "name": "xXc/FractionMath",
+  "description": "Library for doing math operations with Fractions",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Michael Kumar",
+      "email": "m.kumar@abv.bg"
+    }
+  ],
+  "require": {
+  },
+  "require-dev": {
+    "phpspec/phpspec": "^3.4"
+  },
+  "autoload": {
+    "psr-0": {
+      "xXc\\FractionMath\\": "src"
+    },
+    "files": [
+
+    ]
+  }
+}
