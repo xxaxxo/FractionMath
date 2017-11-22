@@ -22,19 +22,19 @@ class FractionSpec extends ObjectBehavior
     function it_can_get_numerator()
     {
         $this->beConstructedWith(1, 2);
-        $this->getNumerator()->shouldReturn(1);
+        $this->numerator()->shouldReturn(1);
     }
 
     function it_can_get_denominator()
     {
         $this->beConstructedWith(1, 2);
-        $this->getDenominator()->shouldReturn(2);
+        $this->denominator()->shouldReturn(2);
     }
 
     function it_can_get_integer()
     {
         $this->beConstructedWith(1, 2, 3);
-        $this->getInteger()->shouldReturn(3);
+        $this->integer()->shouldReturn(3);
     }
 
 

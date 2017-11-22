@@ -8,36 +8,21 @@ namespace xXc\FractionMath;
 
 class Fraction
 {
-    public $integer;
-    public $numerator;
-    public $denominator;
-    public $greatestCommonDivisor;
-
+    private $integer;
+    private $numerator;
+    private $denominator;
+    private $greatestCommonDivisor;
 
     public function __construct($numerator, $denominator, $integer = 0)
     {
         $this->checkInput($numerator, $denominator, $integer);
-
-        $this->integer = $integer;
-
-        $this->simplifyFraction($numerator, $denominator);
-
-        if ($this->numerator > $this->denominator) {
-            $this->integer = ($integer + $this->getWholeNumber($this->numerator, $this->denominator));
-        }
-
-        if ($this->numerator == $this->denominator) {
-            $this->numerator   = 1;
-            $this->denominator = 1;
-            $this->integer++;
-        }
-
+        $this->setFractionParams($numerator, $denominator, $integer);
     }
 
     /**
      * @return int
      */
-    public function getNumerator()
+    public function numerator()
     {
         return $this->numerator;
     }
@@ -45,7 +30,7 @@ class Fraction
     /**
      * @return int
      */
-    public function getDenominator()
+    public function denominator()
     {
         return $this->denominator;
     }
@@ -53,7 +38,7 @@ class Fraction
     /**
      * @return int
      */
-    public function getInteger()
+    public function integer()
     {
         return $this->integer;
     }
@@ -153,6 +138,28 @@ class Fraction
         }
         if ($denominator <= 0 && $integer <= 0) {
             throw new \Exception('Denominator cannot be 0');
+        }
+    }
+
+    /**
+     * @param $numerator
+     * @param $denominator
+     * @param $integer
+     */
+    private function setFractionParams($numerator, $denominator, $integer)
+    {
+        $this->integer = $integer;
+
+        $this->simplifyFraction($numerator, $denominator);
+
+        if ($this->numerator > $this->denominator) {
+            $this->integer = ($integer + $this->getWholeNumber($this->numerator, $this->denominator));
+        }
+
+        if ($this->numerator == $this->denominator) {
+            $this->numerator   = 1;
+            $this->denominator = 1;
+            $this->integer++;
         }
     }
 

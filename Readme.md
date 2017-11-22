@@ -1,26 +1,34 @@
-# Skeleton for fast creation of packages #
+# Composer package for math operations with fractions #
 
-Steps:
-<ul>
-<li>Clone the repo</li>
-<li>Rename PackageName in all files</li>
-<li>Include the local files into your other composer.json require like:
+Auto simplifies the fractions on initialisation.
 
-```json
-"repositories": [
-        {
-            "type": "path",
-            "url": "/path/to/cloned/package",
-            "options": {
-                "symlink": false
-            }
-        }
-    ],
+Usage:
+
+```php
+$fraction = new Fraction(1,2);
+$fraction->display();
 ```
-</li>
+Available methods for a Fraction:
+<ul>
+<li>numerator() - gets the numerator</li>
+<li>denominator() - gets the denominator</li>
+<li>integer() - gets the integer</li>
+<li>getGreatestCommonDivisor() - gets the GCD of the numetor and the denominator</li>
+<li>getFractionAsArray() - returns the fraction as array with keys numerator, denominator, integer</li>
+<li>display() - returns the html for a fraction</li>
 </ul>
+<br>
+Works with irregular fractions aswell
 
-## Branches ##
-### Master - for normal packages ###
-### feature/laravel-skeleton - for laravel packages ###
-
+```php
+$fraction = new Fraction(9,3);
+$fraction->getFractionAsArray(); 
+/*
+returns ...
+  array(
+    'numerator' => 3,
+    'denominator' => 1,
+    'integer' => 3
+    );
+    */
+```
