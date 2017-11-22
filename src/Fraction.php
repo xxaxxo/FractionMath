@@ -56,6 +56,18 @@ class Fraction
     }
 
     /**
+     * @return array
+     */
+    public function getFractionAsObject()
+    {
+        $result = new \stdClass();
+        $result->numerator = $this->numerator;
+        $result->denominator = $this->denominator;
+        $result->integer = $this->integer;
+        return $result;
+    }
+
+    /**
      * @return mixed
      */
     public function getGreatestCommonDivisor()

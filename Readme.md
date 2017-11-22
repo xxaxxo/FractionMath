@@ -15,6 +15,7 @@ Available methods for a Fraction:
 <li>integer() - gets the integer</li>
 <li>getGreatestCommonDivisor() - gets the GCD of the numetor and the denominator</li>
 <li>getFractionAsArray() - returns the fraction as array with keys numerator, denominator, integer</li>
+<li>getFractionAsObject() - returns the fraction as object</li>
 <li>display() - returns the html for a fraction</li>
 </ul>
 <br>

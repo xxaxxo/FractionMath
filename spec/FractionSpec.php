@@ -48,6 +48,12 @@ class FractionSpec extends ObjectBehavior
         ]);
     }
 
+    function it_can_get_the_fraction_as_object()
+    {
+        $this->beConstructedWith(1, 2, 3);
+        $this->getFractionAsObject()->shouldBeObject();
+    }
+
     function it_autosimplifies_fraction()
     {
         $this->beConstructedWith(2, 4);
