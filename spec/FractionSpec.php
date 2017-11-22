@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\xXc\FractionMath;
+namespace spec\xxc\fractionmath;
 
 use Fraction;
 use PhpSpec\ObjectBehavior;

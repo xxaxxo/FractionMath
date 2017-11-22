@@ -3,7 +3,7 @@
  * @author: Michael Kumar <michael.kumar@abv.bg>
  */
 
-namespace xXc\FractionMath;
+namespace xxc\fractionmath;
 
 
 class Fraction

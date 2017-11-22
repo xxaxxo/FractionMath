@@ -1,5 +1,5 @@
 {
-  "name": "xXc/FractionMath",
+  "name": "xxc/fractionmath",
   "description": "Package for doing math operations with Fractions",
   "type": "project",
   "authors": [
@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "xXc\\FractionMath\\": "src/"
+      "xxc\\fractionmath\\": "src/"
     }
   }
 }

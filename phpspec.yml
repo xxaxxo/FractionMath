@@ -1,5 +1,5 @@
 suites:
    acme_suite:
-       namespace:  xXc\FractionMath\
-       psr4_prefix:  xXc\FractionMath
+       namespace:  xxc\fractionmath\
+       psr4_prefix:  xxc\fractionmath
        src_path:  src/
