@@ -1,26 +1,56 @@
-# Skeleton for fast creation of packages #
+# Composer package for math operations with fractions #
 
-Steps:
-<ul>
-<li>Clone the repo</li>
-<li>Rename PackageName in all files</li>
-<li>Include the local files into your other composer.json require like:
+Auto simplifies the fractions on initialisation.
 
-```json
-"repositories": [
-        {
-            "type": "path",
-            "url": "/path/to/cloned/package",
-            "options": {
-                "symlink": false
-            }
-        }
-    ],
+Usage:
+
+```php
+$fraction = new Fraction(1,2);
+$fraction->display();
 ```
-</li>
+Available methods for a Fraction:
+<ul>
+<li>numerator() - gets the numerator</li>
+<li>denominator() - gets the denominator</li>
+<li>integer() - gets the integer</li>
+<li>getGreatestCommonDivisor() - gets the GCD of the numetor and the denominator</li>
+<li>getFractionAsArray() - returns the fraction as array with keys numerator, denominator, integer</li>
+<li>getFractionAsObject() - returns the fraction as object</li>
+<li>display() - returns the html for a fraction</li>
+</ul>
+<br>
+Works with irregular fractions aswell
+
+```php
+$fraction = new Fraction(9,3);
+$fraction->getFractionAsArray(); 
+/*
+returns ...
+  array(
+    'numerator' => 3,
+    'denominator' => 1,
+    'integer' => 3
+    );
+    */
+```
+The Math class handles all the math operations - requires Fraction as inputs and returns a Fraction
+<br>
+Math operations:
+<ul>
+<li>add()</li>
+<li>subtract()</li>
+<li>multiply()</li>
+<li>divide()</li>
 </ul>
 
-## Branches ##
-### Master - for normal packages ###
-### feature/laravel-skeleton - for laravel packages ###
+```php
+$fractionOne = new Fraction(1,3);
+$fractionTwo = new Fraction(1,3);
 
+$mathOperation = new Math();
+
+$mathOperation->add($fractionOne, $fractiontwo);
+$mathOperation->subtract($fractionOne, $fractiontwo);
+$mathOperation->multiply($fractionOne, $fractiontwo);
+$mathOperation->divide($fractionOne, $fractiontwo);
+```
