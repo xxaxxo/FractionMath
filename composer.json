@@ -9,16 +9,13 @@
     }
   ],
   "require": {
+    "phpspec/phpspec": "^4.2"
   },
   "require-dev": {
-    "phpspec/phpspec": "^3.4"
   },
   "autoload": {
-    "psr-0": {
-      "xXc\\FractionMath\\": "src"
-    },
-    "files": [
-
-    ]
+    "psr-4": {
+      "xXc\\FractionMath\\": "src/"
+    }
   }
 }
