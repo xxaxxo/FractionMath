@@ -33,3 +33,24 @@ returns ...
     );
     */
 ```
+The Math class handles all the math operations - requires Fraction as inputs and returns a Fraction
+<br>
+Math operations:
+<ul>
+<li>add()</li>
+<li>subtract()</li>
+<li>multiply()</li>
+<li>divide()</li>
+</ul>
+
+```php
+$fractionOne = new Fraction(1,3);
+$fractionTwo = new Fraction(1,3);
+
+$mathOperation = new Math();
+
+$mathOperation->add($fractionOne, $fractiontwo);
+$mathOperation->subtract($fractionOne, $fractiontwo);
+$mathOperation->multiply($fractionOne, $fractiontwo);
+$mathOperation->divide($fractionOne, $fractiontwo);
+```
