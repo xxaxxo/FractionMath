@@ -2,6 +2,7 @@
   "name": "xxc/fractionmath",
   "description": "Package for doing math operations with Fractions",
   "type": "project",
+  "keywords": ["fraction", "math", "xxaxxo", "xxc"],
   "authors": [
     {
       "name": "Michael Kumar",
@@ -17,5 +18,6 @@
     "psr-4": {
       "xxc\\fractionmath\\": "src/"
     }
-  }
+  },
+  "license": "MIT"
 }

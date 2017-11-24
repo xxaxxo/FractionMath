@@ -1,4 +1,7 @@
 # Composer package for math operations with fractions #
+[![Latest Version](https://img.shields.io/github/release/xxaxxo/FractionMath.svg?style=flat-square)](https://github.com/xxaxxo/FractionMath/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Build Status](https://img.shields.io/travis/xxaxxo/FractionMath/master.svg?style=flat-square)](https://travis-ci.org/xxaxxo/FractionMath)
 
 Auto simplifies the fractions on initialisation.
 
