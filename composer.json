@@ -9,9 +9,9 @@
     }
   ],
   "require": {
-    "phpspec/phpspec": "^4.2"
   },
   "require-dev": {
+     "phpspec/phpspec": "^4.2"
   },
   "autoload": {
     "psr-4": {
