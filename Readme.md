@@ -4,6 +4,11 @@
 [![Build Status](https://img.shields.io/travis/xxaxxo/FractionMath/master.svg?style=flat-square)](https://travis-ci.org/xxaxxo/FractionMath)
 
 Auto simplifies the fractions on initialisation.
+Installation:
+```php
+ composer require xxc/fractionmath:1.*
+```
+
 
 Usage:
 
@@ -20,6 +25,7 @@ Available methods for a Fraction:
 <li>getFractionAsArray() - returns the fraction as array with keys numerator, denominator, integer</li>
 <li>getFractionAsObject() - returns the fraction as object</li>
 <li>display() - returns the html for a fraction</li>
+<li>parse() - static method for quick parsing strings to fractions</li>
 </ul>
 <br>
 Works with irregular fractions aswell
@@ -30,12 +36,19 @@ $fraction->getFractionAsArray();
 /*
 returns ...
   array(
-    'numerator' => 3,
-    'denominator' => 1,
-    'integer' => 3
+    'numerator' => 9,
+    'denominator' => 3,
+    'integer' => 0
     );
     */
 ```
+If you need you can parse strings to fractions with the static parse method
+```php
+xxc\fractionmath\Fraction::parse('1/2'); \\returns a fraction
+\\you can chain methods like this
+xxc\fractionmath\Fraction::parse('2/4')->display(); \\returns html for a fraction 2/4
+```
+
 The Math class handles all the math operations - requires Fraction as inputs and returns a Fraction
 <br>
 Math operations:
@@ -52,8 +65,9 @@ $fractionTwo = new Fraction(1,3);
 
 $mathOperation = new Math();
 
-$mathOperation->add($fractionOne, $fractiontwo);
-$mathOperation->subtract($fractionOne, $fractiontwo);
-$mathOperation->multiply($fractionOne, $fractiontwo);
-$mathOperation->divide($fractionOne, $fractiontwo);
+$mathOperation->add($fractionOne, $fractionTwo);
+$mathOperation->subtract($fractionOne, $fractionTwo);
+$mathOperation->multiply($fractionOne, $fractionTwo);
+$mathOperation->divide($fractionOne, $fractionTwo);
 ```
+
