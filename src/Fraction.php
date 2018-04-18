@@ -87,6 +87,22 @@ class Fraction
         return $fraction;
     }
 
+    /**
+     * a static method for parsing fractions the quick way
+     * @param $wannabeFraction a string in the format int-dash-int
+     * @return Fraction
+     * @throws \Exception
+     */
+    public static function parse($wannabeFraction)
+    {
+        if(!preg_match('{(\d\/\d)}',$wannabeFraction))
+        {
+            throw new \Exception('The passed param should be in the format 1/1 (int-dash-int)');
+        }
+        $wannabeFraction = explode('/', $wannabeFraction);
+        return new self((int)$wannabeFraction[0], (int)$wannabeFraction[1]);
+    }
+
 
     private function getWholeNumber($numerator, $denominator, $number = 0)
     {
