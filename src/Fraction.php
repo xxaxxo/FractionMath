@@ -89,18 +89,18 @@ class Fraction
 
     /**
      * a static method for parsing fractions the quick way
-     * @param $wannabeFraction a string in the format int-dash-int
+     * @param $wannabeFraction - a string in the format int-space-int-slash-int
      * @return Fraction
      * @throws \Exception
      */
     public static function parse($wannabeFraction)
     {
-        if(!preg_match('{(\d\/\d)}',$wannabeFraction))
+        $pregMatchStatus = preg_match('{^(?P<integer>\d\s)*(?P<numerator>\d)\/(?P<denominator>\d)$}', $wannabeFraction, $match);
+        if(empty($match) || $pregMatchStatus == false)
         {
-            throw new \Exception('The passed param should be in the format 1/1 (int-dash-int)');
+            throw new \Exception('The passed param should at least be in the format 1/1 (int-slash-int) or int-space-int-slash-int');
         }
-        $wannabeFraction = explode('/', $wannabeFraction);
-        return new self((int)$wannabeFraction[0], (int)$wannabeFraction[1]);
+        return new self((int)$match['numerator'], (int)$match['denominator'], isset($match['integer'])? (int)$match['integer'] : null);
     }
 
 

@@ -42,11 +42,14 @@ returns ...
     );
     */
 ```
-If you need you can parse strings to fractions with the static parse method
+If you need you can parse strings to fractions with the static parse method.
+The method accepts a string param in the format integer-space-nominator-slash-deniminator - Example for valid inputs: 1/2; 5 1/2; 5/6; 666 1/5;
 ```php
-xxc\fractionmath\Fraction::parse('1/2'); \\returns a fraction
+xxc\fractionmath\Fraction::parse('1/2'); \\returns a fraction with nominator 1 and denominator 2
+xxc\fractionmath\Fraction::parse('3 1/2'); \\returns a fraction with integer 3,nominator 1 and denominator 2
 \\you can chain methods like this
 xxc\fractionmath\Fraction::parse('2/4')->display(); \\returns html for a fraction 2/4
+
 ```
 
 The Math class handles all the math operations - requires Fraction as inputs and returns a Fraction
