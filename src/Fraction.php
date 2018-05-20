@@ -161,12 +161,12 @@ class Fraction
             throw new \Exception('Passed parameters should be integers!');
         }
 
-        if ($numerator <= 0 && $integer <= 0) {
-            throw new \Exception('Numerator cannot be 0 or negative');
-        }
-        if ($denominator <= 0 && $integer <= 0) {
-            throw new \Exception('Denominator cannot be 0');
-        }
+//        if ($numerator <= 0 && $integer <= 0) {
+//            throw new \Exception('Numerator cannot be 0 or negative');
+//        }
+//        if ($denominator <= 0 && $integer <= 0) {
+//            throw new \Exception('Denominator cannot be 0');
+//        }
     }
 
     /**
@@ -185,8 +185,8 @@ class Fraction
         }
 
         if ($this->numerator == $this->denominator) {
-            $this->numerator   = 1;
-            $this->denominator = 1;
+            $this->numerator   = 0;
+            $this->denominator = 0;
             $this->integer++;
         }
     }

@@ -74,8 +74,8 @@ class FractionSpec extends ObjectBehavior
     {
         $this->beConstructedWith(2, 2);
         $this->getFractionAsArray()->shouldReturn([
-            'numerator' => 1,
-            'denominator' => 1,
+            'numerator' => 0,
+            'denominator' => 0,
             'integer' => 1,
         ]);
     }
